@@ -3,8 +3,10 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "build": "vite build",
-    "dev": "vite"
+    "build": "next build",
+    "dev": "next dev",
+    "lint": "next lint",
+    "start": "next start"
   },
   "dependencies": {
     "@radix-ui/react-accordion": "1.2.3",
@@ -35,6 +37,7 @@
     "@radix-ui/react-toggle-group": "1.1.2",
     "@radix-ui/react-tooltip": "1.1.8",
     "@vercel/analytics": "latest",
+    "@vitejs/plugin-react-swc": "latest",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
     "cmdk": "1.1.1",
@@ -64,16 +67,15 @@
     "tsx": "latest",
     "tw-animate-css": "latest",
     "vaul": "1.1.2",
+    "vite": "latest",
     "yaml": "latest"
   },
   "devDependencies": {
     "@types/node": "^22",
     "@types/react": "19.2.2",
     "@types/react-dom": "19.2.2",
-    "@vitejs/plugin-react-swc": "^3.10.2",
     "postcss": "^8.5",
-    "tailwindcss": "4.1.16",
-    "typescript": "^5",
-    "vite": "6.3.5"
+    "tailwindcss": "^4.1.9",
+    "typescript": "^5"
   }
 }
