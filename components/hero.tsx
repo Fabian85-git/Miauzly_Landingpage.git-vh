@@ -34,7 +34,7 @@ export function Hero() {
       </div>
 
       {/* Content */}
-      <div className="relative z-10 w-full px-4 pt-20 pb-16 md:pt-32 md:pb-24 lg:pt-40 lg:pb-32">
+      <div className="relative z-10 w-full px-4 pt-32 pb-16 md:pt-32 md:pb-24 lg:pt-40 lg:pb-32">
         <div className="mx-auto max-w-7xl">
           <div className="max-w-3xl">
             <div className="inline-block rounded-full bg-[#4982A6] px-4 py-2 mb-6">
