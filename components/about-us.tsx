@@ -1,6 +1,7 @@
 "use client"
 
 import { useLanguage } from "@/contexts/language-context"
+import Image from "next/image"
 
 export function AboutUs() {
   const { t } = useLanguage()
@@ -14,8 +15,14 @@ export function AboutUs() {
 
         <div className="bg-gradient-to-br from-[#FFF5E6] to-[#E8F3F8] rounded-3xl p-8 md:p-12 shadow-lg">
           <div className="flex flex-col items-center text-center">
-            <div className="w-20 h-20 rounded-full bg-white flex items-center justify-center text-4xl mb-6 shadow-md">
-              🐱
+            <div className="w-36 h-36 rounded-full overflow-hidden mb-6 shadow-md">
+              <Image
+                src="/images/rubi-ramiro.png"
+                alt="Rubi & Ramiro"
+                width={144}
+                height={144}
+                className="w-full h-full object-cover"
+              />
             </div>
 
             <div className="space-y-4 text-[#2D2D2D] text-lg leading-relaxed">

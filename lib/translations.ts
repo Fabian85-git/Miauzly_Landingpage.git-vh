@@ -82,7 +82,7 @@ export const translations = {
     },
     sneakPreview: {
       title: "Ein erster Blick auf miauzly",
-      mockups: ["Dashboard mit Profilen", "Chat & Buchungsansicht", "Community-Tauschübersicht"],
+      mockups: ["Dashboard mit Profilen", "Profile und Kontakt", "Community-Austausch"],
       description: "Wir entwickeln gerade die erste Version von miauzly.ch.",
       cta: "Melde dich an, um frühzeitig Zugang zur Beta zu erhalten 🐾",
     },
@@ -210,7 +210,7 @@ export const translations = {
     },
     sneakPreview: {
       title: "A first look at miauzly",
-      mockups: ["Dashboard with profiles", "Chat & booking view", "Community exchange overview"],
+      mockups: ["Dashboard with profiles", "Profile and Contact", "Community Exchange"],
       description: "We are currently developing the first version of miauzly.ch.",
       cta: "Sign up to get early access to the beta 🐾",
     },

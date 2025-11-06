@@ -15,18 +15,44 @@ export function Newsletter() {
   const [email, setEmail] = useState("")
   const [userType, setUserType] = useState("")
   const [submitted, setSubmitted] = useState(false)
+  const [isSubmitting, setIsSubmitting] = useState(false)
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
     if (email && userType) {
-      console.log("Newsletter signup:", { email, userType })
-      setSubmitted(true)
+      setIsSubmitting(true)
 
-      setTimeout(() => {
-        setSubmitted(false)
-        setEmail("")
-        setUserType("")
-      }, 5000)
+      try {
+        const formData = new FormData()
+        formData.append("access_key", "5f1f06aa-ed2b-483f-b2cc-844fa01b8b93")
+        formData.append("email", email)
+        formData.append("userType", userType)
+        formData.append("subject", "Neue Newsletter-Anmeldung von miauzly.ch")
+
+        const response = await fetch("https://api.web3forms.com/submit", {
+          method: "POST",
+          body: formData,
+        })
+
+        const data = await response.json()
+
+        if (data.success) {
+          setSubmitted(true)
+          setTimeout(() => {
+            setSubmitted(false)
+            setEmail("")
+            setUserType("")
+          }, 5000)
+        } else {
+          console.error("Form submission failed:", data)
+          alert("Es gab einen Fehler bei der Anmeldung. Bitte versuchen Sie es erneut.")
+        }
+      } catch (error) {
+        console.error("Error submitting form:", error)
+        alert("Es gab einen Fehler bei der Anmeldung. Bitte versuchen Sie es erneut.")
+      } finally {
+        setIsSubmitting(false)
+      }
     }
   }
 
@@ -54,6 +80,7 @@ export function Newsletter() {
                   <Input
                     id="email"
                     type="email"
+                    name="email"
                     placeholder={t.newsletter.emailPlaceholder}
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
@@ -79,9 +106,10 @@ export function Newsletter() {
 
                 <Button
                   type="submit"
-                  className="w-full bg-[#F2A81D] hover:bg-[#E09815] text-white rounded-full py-6 shadow-lg hover:shadow-xl transition-all"
+                  disabled={isSubmitting}
+                  className="w-full bg-[#F2A81D] hover:bg-[#E09815] text-white rounded-full py-6 shadow-lg hover:shadow-xl transition-all disabled:opacity-50"
                 >
-                  {t.newsletter.submitButton}
+                  {isSubmitting ? "Wird gesendet..." : t.newsletter.submitButton}
                 </Button>
 
                 <p className="text-xs text-center text-[#6B6B6B]">{t.newsletter.privacy}</p>
