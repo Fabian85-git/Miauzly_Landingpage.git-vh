@@ -34,8 +34,8 @@ export function Footer() {
                 </a>
               </li>
               <li>
-                <a href="#kontakt" className="text-gray-400 hover:text-[#4ECDC4] transition-colors">
-                  {t.footer.links.kontakt}
+                <a href="mailto:hello@miauzly.ch" className="text-gray-400 hover:text-[#4ECDC4] transition-colors">
+                  hello@miauzly.ch
                 </a>
               </li>
             </ul>

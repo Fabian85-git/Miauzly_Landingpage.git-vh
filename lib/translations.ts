@@ -4,7 +4,7 @@ export const translations = {
   de: {
     hero: {
       badge: "Bald verfügbar in der Schweiz",
-      title: "Liebevolle Katzensitter finden oder selber Katzenliebe schenken",
+      title: "Liebevolle Katzensitter finden oder selber Katzenliebe teilen",
       description:
         "miauzly.ch ist die neue Plattform von Katzenfans für Katzenfans in der Schweiz. Verbinde dich mit Katzenbesitzer*innen in deiner Nähe für gegenseitige Betreuung im Tausch oder finde liebevolle Katzensitter gegen Bezahlung",
       cta: "Jetzt auf die Interessentenliste setzen",
@@ -15,16 +15,17 @@ export const translations = {
       steps: [
         {
           title: "Profil erstellen",
-          description: "als Katzenbesitzer:in oder Sitter",
+          description: "Profil erstellen als Katzenbesitzer:in oder Sitter",
         },
         {
-          title: "Liebevolle Katzensitter finden",
+          title: "Vernetzen",
           description:
-            "Mit Katzenbesitzer*innen vernetzen zur gegenseitigen, kostenlosen Betreuung.Katzensitter in deiner Nähe gegen Bezahlung.",
+            "Vernetze dich mit Katzenfans in deiner Nähe für gegenseitige, kostenlose Betreuung oder finde verlässliche Katzensitter gegen Bezahlung!",
         },
         {
-          title: "Treffen vereinbaren & Vertrauen aufbauen",
-          description: "vor der ersten Betreuung",
+          title: "Kennenlernen",
+          description:
+            "Lernt euch persönlich kennen, bevor die erste Betreuung stattfindet – für ein gutes Gefühl auf beiden Seiten.",
         },
       ],
     },
@@ -32,10 +33,10 @@ export const translations = {
       title: "Für wen ist miauzly?",
       audiences: [
         {
-          title: "Für Katzenbesitzer:innen",
+          title: "Für Katzenhalter:innen",
           benefits: [
             "Mit Katzenbesitzer*innen in der Nähe vernetzen & Betreuung tauschen",
-            "Liebevolle Katzensitter gegen Bezahlung finden",
+            "Finde liebevolle Katzensitter gegen Bezahlung",
             "Marktplatz für Zubehör & Services",
             "Forum für Fragen, Tipps & Austausch",
           ],
@@ -43,7 +44,7 @@ export const translations = {
         {
           title: "Für Katzensitter:innen",
           benefits: [
-            "Katzenliebe schenken – und dabei etwas dazuverdienen",
+            "Katzenliebe teilen – und dabei etwas dazuverdienen",
             "Bestimme selbst, wann du verfügbar bist",
             "Werde Teil einer liebevollen Katzen-Community",
           ],
@@ -54,12 +55,12 @@ export const translations = {
       title: "Warum miauzly.ch?",
       intro: [
         "Wir sind selbst Katzenbesitzer. Und jedes Mal, wenn Ferien oder ein spontaner Ausflug ansteht, kommt dieselbe Sorge: Wer kümmert sich um unsere Fellnasen? Jede Katze hat eigene Bedürfnisse. Und wir wünschen uns jemanden, der während unserer Abwesenheit genauso liebevoll aufpasst wie wir selbst. Weil uns diese Frage so oft beschäftigt hat, haben wir miauzly.ch gegründet: eine Plattform von Katzenfans für Katzenfans in der Schweiz.",
-        "Hier kannst du dich mit Katzenbesitzer*innen in deiner Nähe vernetzen, euch gegenseitig kostenlos unterstützen und dabei Geld sparen. Oder du findest liebevolle Katzensitter gegen Bezahlung.",
+        "Hier kannst du dich mit Katzenhalter:innen in deiner Nähe vernetzen, euch gegenseitig kostenlos unterstützen und dabei Geld sparen. Oder du findest liebevolle Katzensitter gegen Bezahlung.",
       ],
       features: [
         {
           title: "Nur für Katzen",
-          description: "Spezialisiert auf die Bedürfnisse von Katzenbesitzer:innen",
+          description: "Spezialisiert auf die Bedürfnisse von Katzenhalter:innen",
         },
         {
           title: "Community-basiert",
@@ -123,6 +124,7 @@ export const translations = {
         datenschutz: "Datenschutz",
         kontakt: "Kontakt",
       },
+      contact: "hello@miauzly.ch",
       social: "Folge uns",
       copyright: "© 2025 miauzly.ch – Ein Projekt aus der Schweiz 🇨🇭",
       madeWith: "Mit ❤️ für Katzen gemacht",
@@ -142,15 +144,16 @@ export const translations = {
       steps: [
         {
           title: "Create profile",
-          description: "as a cat owner or sitter",
+          description: "Create a profile as a cat owner or sitter",
         },
         {
-          title: "Find loving cat sitters",
-          description: "Connect with cat owners for mutual, free care. Cat sitters in your area for a fee.",
+          title: "Connect",
+          description: "Connect with cat lovers nearby for mutual, free care or find reliable cat sitters for a fee!",
         },
         {
-          title: "Arrange meeting & build trust",
-          description: "before the first care session",
+          title: "Meet",
+          description:
+            "Get to know each other in person before the first care session – for a good feeling on both sides.",
         },
       ],
     },
@@ -249,6 +252,7 @@ export const translations = {
         datenschutz: "Privacy",
         kontakt: "Contact",
       },
+      contact: "hello@miauzly.ch",
       social: "Follow us",
       copyright: "© 2025 miauzly.ch – A project from Switzerland 🇨🇭",
       madeWith: "Made with ❤️ for cats",

@@ -36,9 +36,7 @@ export function HowItWorks() {
                   {index + 1}
                 </div>
 
-                <h3 className="mb-2 text-[#2D2D2D]">{step.title}</h3>
-
-                <p className="text-[#6B6B6B]">{step.description}</p>
+                <p className="text-[#2D2D2D] text-lg leading-relaxed">{step.description}</p>
               </div>
             </div>
           ))}

@@ -14,13 +14,14 @@ export function Hero() {
 
   return (
     <section className="relative min-h-screen flex items-center overflow-hidden">
-      {/* Fullscreen Background Image */}
+      {/* Fullscreen Background Video */}
       <div className="absolute inset-0 z-0">
-        <img
-          src="https://images.unsplash.com/photo-1730465661954-edef864f9a75?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxjYXQlMjBjb3p5JTIwaG9tZSUyMHdhcm18ZW58MXx8fHwxNzYxMjU0ODMzfDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
-          alt="Katze zuhause"
-          className="w-full h-full object-cover"
-        />
+        <video autoPlay loop muted playsInline className="w-full h-full object-cover">
+          <source
+            src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/header_video_miauzly1-xvg0o7ckOcr8koHryQ3MBc75WvPq2w.mp4"
+            type="video/mp4"
+          />
+        </video>
         {/* Dark Overlay for better text readability */}
         <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/50 to-black/30"></div>
       </div>
