@@ -22,19 +22,12 @@ export function HowItWorks() {
         <div className="grid md:grid-cols-3 gap-8 lg:gap-12">
           {t.howItWorks.steps.map((step, index) => (
             <div key={index} className="relative text-center">
-              {/* Connecting Line (hidden on mobile) */}
-              {index < t.howItWorks.steps.length - 1 && (
-                <div className="hidden md:block absolute top-16 left-[60%] w-[80%] h-0.5 bg-gradient-to-r from-[#F2A81D] to-[#4982A6]"></div>
-              )}
-
               <div className="relative z-10 flex flex-col items-center">
                 <div className="mb-4 w-24 h-24 rounded-full bg-gradient-to-br from-[#FFF5E6] to-[#E8F3F8] flex items-center justify-center text-[#4982A6]">
                   {icons[index]}
                 </div>
 
-                <div className="inline-flex items-center justify-center w-8 h-8 rounded-full bg-[#F2A81D] text-white mb-4">
-                  {index + 1}
-                </div>
+                
 
                 <p className="text-[#2D2D2D] text-lg leading-relaxed">{step.description}</p>
               </div>

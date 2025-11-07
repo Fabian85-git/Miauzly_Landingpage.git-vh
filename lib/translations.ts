@@ -52,7 +52,7 @@ export const translations = {
       ],
     },
     whyMiauzly: {
-      title: "Warum miauzly.ch?",
+      title: "Warum miauzly?",
       intro: [
         "Wir sind selbst Katzenbesitzer. Und jedes Mal, wenn Ferien oder ein spontaner Ausflug ansteht, kommt dieselbe Sorge: Wer kümmert sich um unsere Fellnasen? Jede Katze hat eigene Bedürfnisse. Und wir wünschen uns jemanden, der während unserer Abwesenheit genauso liebevoll aufpasst wie wir selbst. Weil uns diese Frage so oft beschäftigt hat, haben wir miauzly.ch gegründet: eine Plattform von Katzenfans für Katzenfans in der Schweiz.",
         "Hier kannst du dich mit Katzenhalter:innen in deiner Nähe vernetzen, euch gegenseitig kostenlos unterstützen und dabei Geld sparen. Oder du findest liebevolle Katzensitter gegen Bezahlung.",
@@ -180,7 +180,7 @@ export const translations = {
       ],
     },
     whyMiauzly: {
-      title: "Why miauzly.ch?",
+      title: "Why miauzly?",
       intro: [
         "We are cat owners ourselves. And every time a vacation or spontaneous trip comes up, the same worry arises: Who will take care of our furry friends? Every cat has its own needs. And we want someone who cares as lovingly as we do during our absence. Because this question has occupied us so often, we founded miauzly.ch: a platform by cat lovers for cat lovers in Switzerland.",
         "Here you can connect with cat owners nearby, support each other for free and save money. Or you can find loving cat sitters for a fee.",
