@@ -2,6 +2,7 @@
 
 import { Instagram } from "lucide-react"
 import { useLanguage } from "@/contexts/language-context"
+import Link from "next/link"
 
 export function Footer() {
   const { t } = useLanguage()
@@ -24,14 +25,14 @@ export function Footer() {
             <h4 className="text-sm opacity-60">{t.footer.legal}</h4>
             <ul className="space-y-2">
               <li>
-                <a href="#impressum" className="text-gray-400 hover:text-[#4ECDC4] transition-colors">
+                <Link href="/impressum" className="text-gray-400 hover:text-[#4ECDC4] transition-colors">
                   {t.footer.links.impressum}
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#datenschutz" className="text-gray-400 hover:text-[#4ECDC4] transition-colors">
+                <Link href="/datenschutz" className="text-gray-400 hover:text-[#4ECDC4] transition-colors">
                   {t.footer.links.datenschutz}
-                </a>
+                </Link>
               </li>
               <li>
                 <a href="mailto:hello@miauzly.ch" className="text-gray-400 hover:text-[#4ECDC4] transition-colors">

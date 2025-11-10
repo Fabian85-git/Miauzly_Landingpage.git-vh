@@ -98,7 +98,7 @@ export const translations = {
     newsletter: {
       title: "Trag dich ein – wir halten dich auf dem Laufenden!",
       subtitle: "Wir starten bald mit der Beta.",
-      description: "Wenn du als Erste:r dabei sein möchtest, trag deine E-Mail ein. Keine Werbung, kein Spam.",
+      description: "Wenn du als Erste:r dabei sein möchtest, trag deine E-Mail-Adresse ein. Keine Werbung, kein Spam.",
       emailLabel: "E-Mail-Adresse",
       emailPlaceholder: "deine@email.ch",
       userTypeLabel: "Ich bin...",
@@ -129,13 +129,94 @@ export const translations = {
       copyright: "© 2025 miauzly.ch – Ein Projekt aus der Schweiz 🇨🇭",
       madeWith: "Mit ❤️ für Katzen gemacht",
     },
+    privacy: {
+      title: "Datenschutzerklärung für Miauzly",
+      backLink: "Zurück",
+      sections: {
+        responsible: {
+          title: "1. Verantwortliche Stelle",
+          content: [
+            "Verantwortlich für die Datenverarbeitung auf dieser Website ist:",
+            "Miauzly",
+            "E-Mail: hello@miauzly.ch",
+          ],
+        },
+        collection: {
+          title: "2. Erhebung und Verarbeitung personenbezogener Daten",
+          content: [
+            "Wir erheben personenbezogene Daten nur, wenn Sie uns diese freiwillig mitteilen – zum Beispiel, wenn Sie Ihre E-Mail-Adresse auf unserer Website eintragen, um Informationen oder Updates zu Miauzly zu erhalten.",
+            "Zusätzlich können bei der Nutzung der Website automatisch technische Daten (z. B. IP-Adresse, Browsertyp, Zeitpunkt des Zugriffs) erhoben werden, um den sicheren Betrieb und die Stabilität der Website zu gewährleisten.",
+          ],
+        },
+        purpose: {
+          title: "3. Zweck der Datenverarbeitung",
+          content: [
+            "Die von Ihnen übermittelten Daten werden ausschliesslich dazu verwendet, Sie über Neuigkeiten und den Start von Miauzly zu informieren oder Ihre Anfrage zu beantworten.",
+            "Eine Weitergabe an Dritte erfolgt nur, wenn dies für die technische Bereitstellung der Website notwendig ist.",
+          ],
+        },
+        hosting: {
+          title: "4. Hosting und Datenweitergabe",
+          content: [
+            "Unsere Website wird von Vercel Inc., 340 S Lemon Ave #4133, Walnut, CA 91789, USA, gehostet. Beim Aufruf der Website werden technische Daten (z. B. IP-Adresse, Browserinformationen) an Vercel übermittelt. Vercel verarbeitet diese Daten in unserem Auftrag.",
+            "Sofern Sie Ihre E-Mail-Adresse über ein Formular einreichen, wird die Eingabe über den Dienst Web3Forms verarbeitet. Die Daten werden dabei verschlüsselt übertragen.",
+          ],
+        },
+        storage: {
+          title: "5. Speicherung der Daten",
+          content: [
+            "Ihre E-Mail-Adresse wird nur so lange gespeichert, wie sie für den jeweiligen Zweck erforderlich ist – insbesondere bis Sie Ihre Einwilligung widerrufen oder die Löschung verlangen.",
+            "Sie können sich jederzeit per E-Mail an hello@miauzly.ch abmelden oder Ihre Daten löschen lassen.",
+          ],
+        },
+        rights: {
+          title: "6. Rechte der betroffenen Personen",
+          content: [
+            "Sie haben das Recht auf Auskunft, Berichtigung, Löschung, Einschränkung der Verarbeitung sowie Datenübertragbarkeit gemäss dem Schweizer Datenschutzgesetz (DSG) und der Datenschutz-Grundverordnung (DSGVO).",
+            "Sie können Ihre Einwilligung jederzeit widerrufen, indem Sie uns eine E-Mail an hello@miauzly.ch senden.",
+          ],
+        },
+        security: {
+          title: "7. Sicherheit",
+          content: [
+            "Wir treffen geeignete technische und organisatorische Massnahmen, um Ihre Daten vor Verlust, Missbrauch und unbefugtem Zugriff zu schützen.",
+          ],
+        },
+        changes: {
+          title: "8. Änderungen dieser Datenschutzerklärung",
+          content: [
+            "Wir behalten uns vor, diese Datenschutzerklärung bei Bedarf anzupassen. Die jeweils aktuelle Version ist jederzeit auf dieser Seite abrufbar.",
+            "Letzte Aktualisierung: November 2025",
+          ],
+        },
+      },
+    },
+    imprint: {
+      title: "Impressum",
+      backLink: "Zurück",
+      sections: {
+        responsible: {
+          title: "Verantwortlich für den Inhalt dieser Website:",
+          content: ["Miauzly", "Musterstr. 200", "8000 Zürich", "E-Mail: hello@miauzly.ch"],
+        },
+        disclaimer: {
+          title: "Haftungsausschluss",
+          content: [
+            "Trotz sorgfältiger inhaltlicher Kontrolle übernehmen wir keine Haftung für die Inhalte externer Links. Für den Inhalt der verlinkten Seiten sind ausschliesslich deren Betreiber verantwortlich.",
+          ],
+        },
+        lastUpdate: {
+          content: "Letzte Aktualisierung: November 2025",
+        },
+      },
+    },
   },
   en: {
     hero: {
       badge: "Coming soon in Switzerland",
       title: "Find loving cat sitters or share your love for cats",
       description:
-        "miauzly.ch is the new platform by cat lovers for cat lovers in Switzerland. Connect with cat owners nearby for mutual care exchange or find loving cat sitters for a fee",
+        "miauzly.ch is the new platform by cat lovers for cat lovers in Switzerland. Connect with cat owners nearby for mutual care exchange or find reliable cat sitters for a fee",
       cta: "Join the waiting list now",
       waitlist: "Sign up for the waiting list and find out when miauzly launches.",
     },
@@ -256,6 +337,83 @@ export const translations = {
       social: "Follow us",
       copyright: "© 2025 miauzly.ch – A project from Switzerland 🇨🇭",
       madeWith: "Made with ❤️ for cats",
+    },
+    privacy: {
+      title: "Privacy Policy for Miauzly",
+      backLink: "Back",
+      sections: {
+        responsible: {
+          title: "1. Responsible Party",
+          content: ["Responsible for data processing on this website:", "Miauzly", "Email: hello@miauzly.ch"],
+        },
+        collection: {
+          title: "2. Collection and Processing of Personal Data",
+          content: [
+            "We only collect personal data if you provide it voluntarily – for example, when you enter your email address on our website to receive information or updates about Miauzly.",
+            "Additionally, technical data (e.g., IP address, browser type, time of access) may be collected automatically when using the website to ensure secure operation and stability.",
+          ],
+        },
+        purpose: {
+          title: "3. Purpose of Data Processing",
+          content: [
+            "The data you provide is used exclusively to inform you about news and the launch of Miauzly or to respond to your inquiry.",
+            "Data is only shared with third parties if necessary for the technical provision of the website.",
+          ],
+        },
+        hosting: {
+          title: "4. Hosting and Data Sharing",
+          content: [
+            "Our website is hosted by Vercel Inc., 340 S Lemon Ave #4133, Walnut, CA 91789, USA. When accessing the website, technical data (e.g., IP address, browser information) is transmitted to Vercel. Vercel processes this data on our behalf.",
+            "If you submit your email address via a form, the input is processed by the Web3Forms service. The data is transmitted in encrypted form.",
+          ],
+        },
+        storage: {
+          title: "5. Data Storage",
+          content: [
+            "Your email address is only stored for as long as necessary for the respective purpose – especially until you revoke your consent or request deletion.",
+            "You can unsubscribe or have your data deleted at any time by sending an email to hello@miauzly.ch.",
+          ],
+        },
+        rights: {
+          title: "6. Rights of Data Subjects",
+          content: [
+            "You have the right to information, correction, deletion, restriction of processing, and data portability in accordance with the Swiss Data Protection Act (DSG) and the General Data Protection Regulation (GDPR).",
+            "You can revoke your consent at any time by sending us an email to hello@miauzly.ch.",
+          ],
+        },
+        security: {
+          title: "7. Security",
+          content: [
+            "We take appropriate technical and organizational measures to protect your data from loss, misuse, and unauthorized access.",
+          ],
+        },
+        changes: {
+          title: "8. Changes to this Privacy Policy",
+          content: [
+            "We reserve the right to update this privacy policy as needed. The current version is always available on this page.",
+            "Last updated: November 2025",
+          ],
+        },
+      },
+    },
+    imprint: {
+      title: "Imprint",
+      backLink: "Back",
+      sections: {
+        responsible: {
+          title: "Responsible for the content of this website:",
+          content: ["Miauzly", "Musterstr. 200", "8000 Zurich", "Email: hello@miauzly.ch"],
+        },
+        disclaimer: {
+          title: "Disclaimer",
+          content: [
+            "Despite careful content control, we assume no liability for the content of external links. The operators of the linked pages are solely responsible for their content.",
+          ],
+        },
+        lastUpdate: {
+          content: "Last updated: November 2025",
+        },
+      },
     },
   },
 }
