@@ -1,5 +1,5 @@
-@import 'tailwindcss';
-@import 'tw-animate-css';
+@import "tailwindcss";
+@import "tw-animate-css";
 
 @custom-variant dark (&:is(.dark *));
 
@@ -75,8 +75,10 @@
 }
 
 @theme inline {
-  --font-sans: 'Geist', 'Geist Fallback';
-  --font-mono: 'Geist Mono', 'Geist Mono Fallback';
+  --font-sans: "Geist", "Geist Fallback";
+  --font-mono: "Geist Mono", "Geist Mono Fallback";
+  /* Changed to Modak font for headings */
+  --font-display: "Modak", cursive;
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --color-card: var(--card);
@@ -121,5 +123,18 @@
   }
   body {
     @apply bg-background text-foreground;
+  }
+  /* Apply Modak font to all h1 and h2 elements */
+  h1,
+  h2 {
+    font-family: var(--font-display);
+    /* Increased font sizes for h1 and h2 */
+  }
+  h1 {
+    /* Added tighter line height for h1 */
+    @apply text-5xl md:text-6xl lg:text-7xl leading-tight;
+  }
+  h2 {
+    @apply text-4xl md:text-5xl lg:text-6xl;
   }
 }

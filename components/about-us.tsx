@@ -10,7 +10,7 @@ export function AboutUs() {
     <section className="bg-white px-4 py-16 md:py-24">
       <div className="mx-auto max-w-4xl">
         <div className="text-center mb-8">
-          <h2 className="text-3xl md:text-4xl text-[#2D2D2D] mb-4">{t.aboutUs.title}</h2>
+          <h2 className="text-3xl md:text-5xl text-[#2D2D2D] mb-4">{t.aboutUs.title}</h2>
         </div>
 
         <div className="bg-gradient-to-br from-[#FFF5E6] to-[#E8F3F8] rounded-3xl p-8 md:p-12">

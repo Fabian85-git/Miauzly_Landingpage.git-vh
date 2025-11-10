@@ -35,14 +35,16 @@ export function Hero() {
       </div>
 
       {/* Content */}
-      <div className="relative z-10 w-full px-4 pt-32 pb-16 md:pt-32 md:pb-24 lg:pt-40 lg:pb-32">
+      <div className="relative z-10 w-full px-4 pt-32 pb-16 md:pt-40 md:pb-24 lg:pt-40 lg:pb-32">
         <div className="mx-auto max-w-7xl">
           <div className="max-w-3xl">
             <div className="inline-block rounded-full bg-[#4982A6] px-4 py-2 mb-6">
               <span className="text-sm text-white">{t.hero.badge}</span>
             </div>
 
-            <h1 className="text-4xl md:text-5xl lg:text-6xl leading-tight text-white mb-6">{t.hero.title}</h1>
+            <h1 className="md:text-6xl lg:text-7xl leading-none text-white mb-6 text-left text-5xl tracking-normal font-normal leading-3">
+              {t.hero.title}
+            </h1>
 
             <p className="text-lg md:text-xl text-gray-200 mb-8 max-w-2xl">{t.hero.description}</p>
 

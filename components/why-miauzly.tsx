@@ -10,7 +10,7 @@ export function WhyMiauzly() {
     <section className="px-4 py-16 md:py-24 bg-[rgba(255,173,8,1)]">
       <div className="mx-auto max-w-7xl">
         <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl text-[#2D2D2D] mb-6">{t.whyMiauzly.title}</h2>
+          <h2 className="text-3xl md:text-5xl text-[#2D2D2D] mb-6">{t.whyMiauzly.title}</h2>
           <div className="max-w-4xl mx-auto space-y-4 text-[#2D2D2D]">
             {t.whyMiauzly.intro.map((paragraph, index) => (
               <p key={index}>{paragraph}</p>

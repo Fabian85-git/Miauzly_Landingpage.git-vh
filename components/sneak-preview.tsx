@@ -10,7 +10,7 @@ export function SneakPreview() {
     <section className="bg-white px-4 py-16 md:py-24">
       <div className="mx-auto max-w-7xl">
         <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl text-[#2D2D2D] mb-4">{t.sneakPreview.title}</h2>
+          <h2 className="text-3xl md:text-5xl text-[#2D2D2D] mb-4">{t.sneakPreview.title}</h2>
         </div>
 
         <div className="grid md:grid-cols-3 gap-8 mb-8">
