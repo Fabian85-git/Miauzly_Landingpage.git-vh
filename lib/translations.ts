@@ -6,7 +6,7 @@ export const translations = {
       badge: "Bald verfügbar in der Schweiz",
       title: "Liebevolle Katzensitter finden oder selber Katzenliebe teilen",
       description:
-        "miauzly.ch ist die neue Plattform von Katzenfans für Katzenfans in der Schweiz. Verbinde dich mit Katzenbesitzer*innen in deiner Nähe für gegenseitige Betreuung im Tausch oder finde liebevolle Katzensitter gegen Bezahlung",
+        "Bald verfügbar: miauzly.ch ist die neu Plattform von Katzenfans für Katzenfans in der Schweiz. Verbinde dich bei uns mit Katzenhalter*innen in deiner Nähe für gegenseitge Betreuung im Tausch oder finde liebevolle Katzensitter gegen Bezahlung.",
       cta: "Jetzt auf die Interessentenliste setzen",
       waitlist: "Trage dich auf die Warteliste ein und erfahre, wenn miauzly startet.",
     },
@@ -216,7 +216,7 @@ export const translations = {
       badge: "Coming soon in Switzerland",
       title: "Find loving cat sitters or share your love for cats",
       description:
-        "miauzly.ch is the new platform by cat lovers for cat lovers in Switzerland. Connect with cat owners nearby for mutual care exchange or find reliable cat sitters for a fee",
+        "Coming soon: miauzly.ch is the new platform by cat lovers for cat lovers in Switzerland. Connect with cat owners nearby for mutual care exchange or find reliable cat sitters for a fee.",
       cta: "Join the waiting list now",
       waitlist: "Sign up for the waiting list and find out when miauzly launches.",
     },

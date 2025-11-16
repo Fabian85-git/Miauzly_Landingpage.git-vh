@@ -15,9 +15,9 @@ export default function Page() {
     <PasswordGate>
       <div className="min-h-screen bg-white">
         <Hero />
-        <HowItWorks />
         <ForWhom />
         <WhyMiauzly />
+        <HowItWorks />
         <SneakPreview />
         <AboutUs />
         <Newsletter />
