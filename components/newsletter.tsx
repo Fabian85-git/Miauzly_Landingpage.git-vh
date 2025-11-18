@@ -14,19 +14,21 @@ export function Newsletter() {
   const { t } = useLanguage()
   const [email, setEmail] = useState("")
   const [userType, setUserType] = useState("")
+  const [location, setLocation] = useState("")
   const [submitted, setSubmitted] = useState(false)
   const [isSubmitting, setIsSubmitting] = useState(false)
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
-    if (email && userType) {
+    if (email) {
       setIsSubmitting(true)
 
       try {
         const formData = new FormData()
         formData.append("access_key", "5f1f06aa-ed2b-483f-b2cc-844fa01b8b93")
         formData.append("email", email)
-        formData.append("userType", userType)
+        if (userType) formData.append("userType", userType)
+        if (location) formData.append("location", location)
         formData.append("subject", "Neue Newsletter-Anmeldung von miauzly.ch")
 
         const response = await fetch("https://api.web3forms.com/submit", {
@@ -42,6 +44,7 @@ export function Newsletter() {
             setSubmitted(false)
             setEmail("")
             setUserType("")
+            setLocation("")
           }, 5000)
         } else {
           console.error("Form submission failed:", data)
@@ -85,14 +88,14 @@ export function Newsletter() {
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
                     required
-                    className="rounded-xl border-gray-200 bg-gray-50 h-12"
+                    className="rounded-xl border-gray-200 bg-gray-50 h-12 px-4"
                   />
                 </div>
 
                 <div className="space-y-2">
                   <Label htmlFor="userType">{t.newsletter.userTypeLabel}</Label>
-                  <Select value={userType} onValueChange={setUserType} required>
-                    <SelectTrigger id="userType" className="rounded-xl border-gray-200 bg-gray-50 h-12">
+                  <Select value={userType} onValueChange={setUserType}>
+                    <SelectTrigger id="userType" className="rounded-xl border-gray-200 bg-gray-50 h-12 px-4 flex items-center">
                       <SelectValue placeholder={t.newsletter.userTypePlaceholder} />
                     </SelectTrigger>
                     <SelectContent>
@@ -104,13 +107,26 @@ export function Newsletter() {
                   </Select>
                 </div>
 
-                <Button
+                <div className="space-y-2">
+                  <Label htmlFor="location">{t.newsletter.locationLabel}</Label>
+                  <Input
+                    id="location"
+                    type="text"
+                    name="location"
+                    placeholder={t.newsletter.locationPlaceholder}
+                    value={location}
+                    onChange={(e) => setLocation(e.target.value)}
+                    className="rounded-xl border-gray-200 bg-gray-50 h-12 px-4"
+                  />
+                </div>
+
+                <button
                   type="submit"
                   disabled={isSubmitting}
-                  className="w-full bg-brand-yellow hover:bg-brand-yellow-hover text-gray-900 rounded-full py-6 transition-all disabled:opacity-50"
+                  className="w-full bg-brand-yellow hover:bg-brand-yellow-hover text-gray-900 rounded-full px-12 py-6 transition-all font-medium cursor-pointer disabled:opacity-50"
                 >
                   {isSubmitting ? "Wird gesendet..." : t.newsletter.submitButton}
-                </Button>
+                </button>
 
                 <p className="text-xs text-center text-[#6B6B6B]">{t.newsletter.privacy}</p>
               </form>
@@ -126,7 +142,6 @@ export function Newsletter() {
                 <br />
                 {t.newsletter.successSubMessage}
               </p>
-              <div className="text-6xl animate-[wave_0.5s_ease-in-out_infinite]">🐾</div>
             </div>
           )}
         </div>

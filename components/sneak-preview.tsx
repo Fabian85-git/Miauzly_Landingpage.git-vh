@@ -2,27 +2,44 @@
 
 import { useLanguage } from "@/contexts/language-context"
 import Image from "next/image"
-import useEmblaCarousel from "embla-carousel-react"
-import { useCallback, useEffect, useState } from "react"
+import { useCallback, useEffect, useRef, useState } from "react"
 
 export function SneakPreview() {
   const { t } = useLanguage()
-  const [emblaRef, emblaApi] = useEmblaCarousel({ loop: false, align: "center" })
+  const scrollRef = useRef<HTMLDivElement>(null)
   const [selectedIndex, setSelectedIndex] = useState(0)
 
-  const onSelect = useCallback(() => {
-    if (!emblaApi) return
-    setSelectedIndex(emblaApi.selectedScrollSnap())
-  }, [emblaApi])
-
   useEffect(() => {
-    if (!emblaApi) return
-    onSelect()
-    emblaApi.on("select", onSelect)
-    return () => {
-      emblaApi.off("select", onSelect)
+    const container = scrollRef.current
+    if (!container) return
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            const index = parseInt(entry.target.getAttribute('data-index') || '0')
+            setSelectedIndex(index)
+          }
+        })
+      },
+      { root: container, threshold: 0.5 }
+    )
+
+    const slides = container.querySelectorAll('[data-index]')
+    slides.forEach((slide) => observer.observe(slide))
+
+    return () => observer.disconnect()
+  }, [])
+
+  const scrollToIndex = useCallback((index: number) => {
+    const container = scrollRef.current
+    if (!container) return
+    const slides = container.querySelectorAll('[data-index]')
+    const slide = slides[index] as HTMLElement
+    if (slide) {
+      slide.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' })
     }
-  }, [emblaApi, onSelect])
+  }, [])
 
   const mockups = [
     {
@@ -50,27 +67,33 @@ export function SneakPreview() {
         </div>
 
         <div className="md:hidden mb-8">
-          <div className="overflow-hidden" ref={emblaRef}>
-            <div className="flex">
-              {mockups.map((mockup, index) => (
-                <div key={index} className="flex-[0_0_100%] min-w-0 px-4">
-                  <div className="flex flex-col items-center">
-                    <div className="bg-[#2D2D2D] rounded-[2rem] p-2 w-full max-w-[280px] mx-auto">
-                      <div className="bg-white rounded-[1.5rem] overflow-hidden">
-                        <Image
-                          src={mockup.src || "/placeholder.svg"}
-                          alt={mockup.alt}
-                          width={280}
-                          height={560}
-                          className="w-full h-auto"
-                        />
-                      </div>
+          <div 
+            ref={scrollRef}
+            className="overflow-x-auto snap-x snap-mandatory flex scrollbar-hide"
+            style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
+          >
+            {mockups.map((mockup, index) => (
+              <div 
+                key={index} 
+                data-index={index}
+                className="flex-shrink-0 w-full snap-center px-4"
+              >
+                <div className="flex flex-col items-center">
+                  <div className="bg-[#2D2D2D] rounded-[2rem] p-2 w-full max-w-[280px] mx-auto">
+                    <div className="bg-white rounded-[1.5rem] overflow-hidden">
+                      <Image
+                        src={mockup.src || "/placeholder.svg"}
+                        alt={mockup.alt}
+                        width={280}
+                        height={560}
+                        className="w-full h-auto"
+                      />
                     </div>
-                    <p className="mt-4 text-sm text-[#6B6B6B]">{mockup.label}</p>
                   </div>
+                  <p className="mt-4 text-sm text-[#6B6B6B]">{mockup.label}</p>
                 </div>
-              ))}
-            </div>
+              </div>
+            ))}
           </div>
 
           <div className="flex justify-center gap-2 mt-6">
@@ -80,13 +103,14 @@ export function SneakPreview() {
                 className={`w-2 h-2 rounded-full transition-colors ${
                   index === selectedIndex ? "bg-brand-blue" : "bg-gray-300"
                 }`}
-                onClick={() => emblaApi?.scrollTo(index)}
+                onClick={() => scrollToIndex(index)}
                 aria-label={`Go to slide ${index + 1}`}
               />
             ))}
           </div>
         </div>
 
+        {/* Desktop grid remains unchanged */}
         <div className="hidden md:grid md:grid-cols-3 gap-8 mb-8">
           {mockups.map((mockup, index) => (
             <div key={index} className="flex flex-col items-center">
