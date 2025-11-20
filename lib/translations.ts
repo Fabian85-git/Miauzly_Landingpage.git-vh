@@ -82,7 +82,7 @@ export const translations = {
     },
     sneakPreview: {
       title: "Ein erster Blick auf miauzly",
-      mockups: ["Home", "Katzensitter Suche", "Profil Besitzer", "Termine", "Marktplatz"],
+      mockups: ["Home", "Profil Halter*innen", "Termine", "Marktplatz"],
       description: "Wir entwickeln gerade die erste Version von miauzly.ch.",
       cta: "Melde dich an, um frühzeitig Zugang zur Beta zu erhalten",
     },
@@ -128,8 +128,8 @@ export const translations = {
       },
       contact: "hello@miauzly.ch",
       social: "Folge uns",
-      copyright: "© 2025 miauzly.ch – Ein Projekt aus der Schweiz 🇨🇭",
-      madeWith: "Mit ❤️ für Katzen gemacht",
+      copyright: "© 2025 miauzly.ch – Mit ❤️ für Katzen gemacht",
+      madeWith: "",
     },
     privacy: {
       title: "Datenschutzerklärung für Miauzly",
@@ -293,7 +293,7 @@ export const translations = {
     },
     sneakPreview: {
       title: "A first look at miauzly",
-      mockups: ["Home", "Find Sitters", "Owner Profile", "Appointments", "Marketplace"],
+      mockups: ["Home", "Owner Profile", "Appointments", "Marketplace"],
       description: "We are currently developing the first version of miauzly.ch.",
       cta: "Sign up to get early access to the beta",
     },
@@ -339,8 +339,8 @@ export const translations = {
       },
       contact: "hello@miauzly.ch",
       social: "Follow us",
-      copyright: "© 2025 miauzly.ch – A project from Switzerland 🇨🇭",
-      madeWith: "Made with ❤️ for cats",
+      copyright: "© 2025 miauzly.ch – Made with ❤️ for cats",
+      madeWith: "",
     },
     privacy: {
       title: "Privacy Policy for Miauzly",

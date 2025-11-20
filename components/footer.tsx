@@ -73,7 +73,6 @@ export function Footer() {
         {/* Bottom Bar */}
         <div className="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
           <p className="text-gray-400 text-sm">{t.footer.copyright}</p>
-          <p className="text-gray-400 text-sm">{t.footer.madeWith}</p>
         </div>
       </div>
     </footer>

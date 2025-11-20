@@ -17,15 +17,15 @@ export function SneakPreview() {
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
-            const index = parseInt(entry.target.getAttribute('data-index') || '0')
+            const index = Number.parseInt(entry.target.getAttribute("data-index") || "0")
             setSelectedIndex(index)
           }
         })
       },
-      { root: container, threshold: 0.5 }
+      { root: container, threshold: 0.5 },
     )
 
-    const slides = container.querySelectorAll('[data-index]')
+    const slides = container.querySelectorAll("[data-index]")
     slides.forEach((slide) => observer.observe(slide))
 
     return () => observer.disconnect()
@@ -34,10 +34,10 @@ export function SneakPreview() {
   const scrollToIndex = useCallback((index: number) => {
     const container = scrollRef.current
     if (!container) return
-    const slides = container.querySelectorAll('[data-index]')
+    const slides = container.querySelectorAll("[data-index]")
     const slide = slides[index] as HTMLElement
     if (slide) {
-      slide.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' })
+      slide.scrollIntoView({ behavior: "smooth", block: "nearest", inline: "center" })
     }
   }, [])
 
@@ -48,24 +48,19 @@ export function SneakPreview() {
       label: t.sneakPreview.mockups[0],
     },
     {
-      src: "/images/2-list-katzensitter-preview.jpg",
-      alt: "Miauzly App - Katzensitter Liste",
-      label: t.sneakPreview.mockups[1],
-    },
-    {
       src: "/images/3-profil-besitzer-preview.jpg",
       alt: "Miauzly App - Besitzer Profil",
-      label: t.sneakPreview.mockups[2],
+      label: t.sneakPreview.mockups[1],
     },
     {
       src: "/images/4-termine-preview.jpg",
       alt: "Miauzly App - Termine",
-      label: t.sneakPreview.mockups[3],
+      label: t.sneakPreview.mockups[2],
     },
     {
       src: "/images/5-marktplatz-preview.jpg",
       alt: "Miauzly App - Marktplatz",
-      label: t.sneakPreview.mockups[4],
+      label: t.sneakPreview.mockups[3],
     },
   ]
 
@@ -78,17 +73,13 @@ export function SneakPreview() {
 
         {/* Mobile carousel */}
         <div className="md:hidden mb-8">
-          <div 
+          <div
             ref={scrollRef}
             className="overflow-x-auto snap-x snap-mandatory flex scrollbar-hide"
-            style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
+            style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
           >
             {mockups.map((mockup, index) => (
-              <div 
-                key={index} 
-                data-index={index}
-                className="flex-shrink-0 w-full snap-center px-4"
-              >
+              <div key={index} data-index={index} className="flex-shrink-0 w-full snap-center px-4">
                 <div className="flex flex-col items-center">
                   <div className="bg-[#2D2D2D] rounded-[2rem] p-2 w-full max-w-[280px] mx-auto">
                     <div className="bg-white rounded-[1.5rem] overflow-hidden">
