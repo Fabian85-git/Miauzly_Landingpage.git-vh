@@ -7,8 +7,22 @@ export function ForWhom() {
   const { t } = useLanguage()
 
   const icons = [
-    <Image key="holding" src="/images/holding2.svg" alt="Holding cat" width={200} height={200} className="h-[200px] w-[200px]" />, 
-    <Image key="sitting" src="/images/sitting2.svg" alt="Sitting cat" width={200} height={200} className="h-[200px] w-[200px]" />
+    <Image
+      key="holding"
+      src="/images/holding2.svg"
+      alt="Holding cat"
+      width={200}
+      height={200}
+      className="h-[200px] w-[200px]"
+    />,
+    <Image
+      key="sitting"
+      src="/images/sitting2.svg"
+      alt="Sitting cat"
+      width={200}
+      height={200}
+      className="h-[200px] w-[200px]"
+    />,
   ]
 
   const emojis = ["🏠", "🐾"]
@@ -26,7 +40,7 @@ export function ForWhom() {
             <div key={index} className="rounded-3xl p-8 transition-all" style={{ backgroundColor: colors[index] }}>
               <div className="flex flex-col gap-4 mb-6 items-start">
                 {icons[index]}
-                <h3 className="text-white font-bold text-center">{audience.title}</h3>
+                <h3 className="text-white font-bold text-center text-2xl">{audience.title}</h3>
               </div>
 
               <ul className="space-y-4">
@@ -37,7 +51,7 @@ export function ForWhom() {
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" />
                       </svg>
                     </div>
-                    <p className="text-white flex-1">{benefit}</p>
+                    <p className="text-white flex-1 text-xl">{benefit}</p>
                   </li>
                 ))}
               </ul>

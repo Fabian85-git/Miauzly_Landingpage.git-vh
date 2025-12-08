@@ -18,7 +18,7 @@ export function WhyMiauzly() {
       <div className="mx-auto max-w-7xl">
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-5xl text-[#2D2D2D] mb-6">{t.whyMiauzly.title}</h2>
-          <div className="max-w-4xl mx-auto space-y-4 text-[#2D2D2D]">
+          <div className="max-w-4xl mx-auto space-y-4 text-[#2D2D2D] text-xl">
             {t.whyMiauzly.intro.map((paragraph, index) => (
               <p key={index}>{paragraph}</p>
             ))}
@@ -36,8 +36,8 @@ export function WhyMiauzly() {
                   {icons[index]}
                 </div>
                 <div>
-                  <h3 className="mb-2 text-[#2D2D2D] font-bold">{feature.title}</h3>
-                  <p className="text-[#6B6B6B]">{feature.description}</p>
+                  <h3 className="mb-2 text-[#2D2D2D] font-bold text-xl">{feature.title}</h3>
+                  <p className="text-[#6B6B6B] text-xl">{feature.description}</p>
                 </div>
               </div>
             </div>

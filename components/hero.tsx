@@ -15,17 +15,8 @@ export function Hero() {
     <section className="relative min-h-screen flex items-center overflow-hidden">
       {/* Fullscreen Background Video */}
       <div className="absolute inset-0 z-0">
-        <video 
-          autoPlay 
-          loop 
-          muted 
-          playsInline 
-          className="w-full h-full object-cover brightness-110 contrast-110"
-        >
-          <source
-            src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/header_video_miauzly3-ac3WV7WfnnQ45gPDrOwEfvoNIP2ddK.mp4"
-            type="video/mp4"
-          />
+        <video autoPlay loop muted playsInline className="w-full h-full object-cover brightness-110 contrast-110">
+          <source src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/header_video_miauzly3-ac3WV7WfnnQ45gPDrOwEfvoNIP2ddK.mp4" type="video/mp4" />
         </video>
         <div className="absolute inset-0 bg-gradient-to-r from-black/60 via-black/40 to-black/20"></div>
       </div>
@@ -50,17 +41,17 @@ export function Hero() {
               {t.hero.title}
             </h1>
 
-            <p className="text-lg md:text-xl text-gray-200 mb-8 max-w-2xl">{t.hero.description}</p>
+            <p className="text-xl md:text-xl text-gray-200 mb-8 max-w-2xl">{t.hero.description}</p>
 
-            <div className="space-y-4">
+            <div className="flex flex-col items-start gap-4 w-full md:w-auto">
               <button
                 onClick={scrollToNewsletter}
-                className="bg-brand-yellow hover:bg-brand-yellow-hover text-gray-900 rounded-full px-12 py-6 transition-all font-medium cursor-pointer inline-flex items-center justify-center"
+                className="w-full md:w-auto bg-brand-yellow hover:bg-brand-yellow-hover text-gray-900 rounded-full px-10 py-6 transition-all font-medium cursor-pointer inline-flex items-center justify-center text-lg"
               >
                 {t.hero.cta}
               </button>
 
-              <p className="text-sm text-gray-300 max-w-md">{t.hero.waitlist}</p>
+              <p className="text-gray-300 max-w-md text-base">{t.hero.waitlist}</p>
             </div>
           </div>
         </div>

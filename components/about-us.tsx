@@ -25,7 +25,7 @@ export function AboutUs() {
               />
             </div>
 
-            <div className="space-y-4 text-white text-lg leading-relaxed">
+            <div className="space-y-4 text-white text-xl leading-relaxed">
               {t.aboutUs.text.map((paragraph, index) => (
                 <p key={index}>{paragraph}</p>
               ))}

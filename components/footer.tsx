@@ -15,7 +15,7 @@ export function Footer() {
           {/* Brand */}
           <div className="space-y-4">
             <div className="flex items-center gap-2">
-              <h3 className="text-xl">miauzly.ch</h3>
+              <h3 className="text-2xl">miauzly.ch</h3>
             </div>
             <p className="text-gray-400">{t.footer.tagline}</p>
           </div>

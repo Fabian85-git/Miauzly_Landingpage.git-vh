@@ -136,7 +136,7 @@ export function SneakPreview() {
         </div>
 
         <div className="text-center max-w-2xl mx-auto">
-          <p className="text-lg text-[#6B6B6B]">
+          <p className="text-xl text-[#6B6B6B]">
             {t.sneakPreview.description}
             <br />
             {t.sneakPreview.cta}
